@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WK Store</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Cart Overlay & Slide-out Drawer -->
+<div class="cart-overlay" id="cart-overlay"></div>
+<div class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+        <h3>Your Shopping Cart</h3>
+        <button class="close-cart-btn" id="close-cart">&times;</button>
+    </div>
+    <div class="cart-body" id="cart-items">
+        <p class="empty-msg">Your cart is currently empty.</p>
+    </div>
+    <div class="cart-footer">
+        <div class="cart-total">
+            <span>Total:</span>
+            <span id="cart-total-price">$0.00</span>
+        </div>
+        <button class="btn-checkout" id="checkout-btn">Proceed to Checkout</button>
+    </div>
+</div>
+
+    <!-- Header Navigation -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="images/logo.png" alt="WK Store Logo" class="logo-img">
+            <span>WK STORE.</span>
+        </div>
+        <div class="cart-btn" id="nav-cart">
+            🛒 Cart (0)
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="badge">New Arrival</span>
+            <h1>Next-Gen Sound, <br>Pure Comfort.</h1>
+            <p>Experience crystal-clear audio with our latest wireless headphones. Premium sound quality engineered for daily style.</p>
+            <div class="hero-btns">
+                <a href="#featured-product" class="btn-primary">Shop Now</a>
+                <a href="#products" class="btn-secondary">Explore Deals</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="https://sc04.alicdn.com/kf/Hc984492fb4f44ef19c9e2e1519c87f77R.png" alt="Featured Product">
+        </div>
+    </section>
+
+    <!-- Main Featured Showcase Section -->
+    <section class="featured-showcase" id="featured-product">
+        <div class="showcase-container">
+            <!-- Left Side: Interactive Gallery -->
+            <div class="gallery-wrapper">
+                <div class="main-image-box">
+                    <img id="main-product-img" src="https://sc04.alicdn.com/kf/Hc984492fb4f44ef19c9e2e1519c87f77R.png" alt="Wireless Headphones">
+                </div>
+                <div class="thumbnail-list">
+                    <img class="thumb active" src="https://sc04.alicdn.com/kf/Hc984492fb4f44ef19c9e2e1519c87f77R.png" alt="Black Version">
+                    <img class="thumb" src="https://img.drz.lazcdn.com/g/kf/Sc57b10027c92485fa81f56c540412db7P.jpg_200x200q80.avif" alt="Green Version">
+                </div>
+            </div>
+
+            <!-- Right Side: Details & Actions -->
+            <div class="details-wrapper">
+                <span class="badge">NEW ARRIVAL</span>
+                <h2>Wireless Noise-Canceling Headphones</h2>
+                <div class="price">$17.99</div>
+                <p class="desc">Experience premium sound quality with state-of-the-art active noise cancellation and 30-hour battery life.</p>
+
+                <!-- Color Selection -->
+                <div class="option-group">
+                    <label>Select Color:</label>
+                    <div class="color-options">
+                        <span class="color-dot black active" data-img="https://sc04.alicdn.com/kf/Hc984492fb4f44ef19c9e2e1519c87f77R.png"></span>
+                        <span class="color-dot green" data-img="https://img.drz.lazcdn.com/g/kf/Sc57b10027c92485fa81f56c540412db7P.jpg_200x200q80.avif"></span>
+                    </div>
+                </div>
+
+                <!-- Quantity Selector -->
+                <div class="option-group row-align">
+                    <label>Quantity:</label>
+                    <div class="qty-selector">
+                        <button id="qty-minus">-</button>
+                        <span id="qty-value">1</span>
+                        <button id="qty-plus">+</button>
+                    </div>
+                </div>
+
+                <!-- Main Add To Cart -->
+                <button id="main-add-cart-btn" class="btn-add-cart">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Grid -->
+    <section class="products-section" id="products">
+        <div class="section-header">
+            <h2>Featured Products</h2>
+            <p>Explore our best-selling high quality gadgets</p>
+        </div>
+
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="card-image"><img src="https://sc04.alicdn.com/kf/Hc984492fb4f44ef19c9e2e1519c87f77R.png" alt="Headphones"></div>
+                <div class="card-info">
+                    <span class="category">Audio</span>
+                    <h3>Premium Headphones</h3>
+                    <div class="rating">★★★★★ <span>(4.8)</span></div>
+                    <div class="card-bottom">
+                        <span class="price">$17.99</span>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="card-image"><img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&q=80" alt="Watch"></div>
+                <div class="card-info">
+                    <span class="category">Wearables</span>
+                    <h3>Minimalist Watch</h3>
+                    <div class="rating">★★★★☆ <span>(4.5)</span></div>
+                    <div class="card-bottom">
+                        <span class="price">$89.99</span>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="card-image"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&q=80" alt="Shoes"></div>
+                <div class="card-info">
+                    <span class="category">Footwear</span>
+                    <h3>Pro Sneakers</h3>
+                    <div class="rating">★★★★★ <span>(4.9)</span></div>
+                    <div class="card-bottom">
+                        <span class="price">$110.00</span>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="card-image"><img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=600&q=80" alt="Sunglasses"></div>
+                <div class="card-info">
+                    <span class="category">Accessories</span>
+                    <h3>Polarized Glasses</h3>
+                    <div class="rating">★★★★☆ <span>(4.6)</span></div>
+                    <div class="card-bottom">
+                        <span class="price">$45.00</span>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<!-- Footer Section -->
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-col">
+            <div class="logo">
+                <img src="images/logo.png" alt="WK Store Logo" class="logo-img">
+                <span>WK STORE.</span>
+            </div>
+            <p>Your one-stop destination for modern, high-quality audio gear and accessories.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#featured-product">Featured Showcase</a></li>
+                <li><a href="#products">All Products</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Contact Us</h4>
+            <p>Email: wkstore@gmail.com</p>
+            <p>Phone: +923162345678</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 WK Store. All rights reserved.</p>
+    </div>
+</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
